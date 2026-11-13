@@ -703,7 +703,7 @@ class Acode {
 
 	[onPluginLoadCallback](pluginId) {
 		if (this.#pluginWatchers[pluginId]) {
-			this.#pluginWatchers[pluginId].resolve();
+			this.#pluginWatchers[pluginId].resolve(true);
 			delete this.#pluginWatchers[pluginId];
 		}
 	}
